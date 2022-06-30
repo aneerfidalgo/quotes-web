@@ -1,19 +1,16 @@
 import React from "react";
 
-function Quote() {
+function Quote({ quote }) {
   return (
     <div className="quote">
-      <div className="anime" name="Tanjiro Kamado">
-        Tanjiro Kamado
+      <div className="name" title={quote.name}>
+        {quote.name}
       </div>
 
-      <blockquote>
-        i can do it, i know i can do it. i'm the guy who gets it done broken
-        bones or not... no matter what... I CAN DO IT! I CAN FIGHT!!
-      </blockquote>
+      <blockquote>{quote.message}</blockquote>
 
-      <div className="character" name="Ichigo Kurosaki">
-        Ichigo Kurosaki
+      <div className="image" title={quote.image}>
+        {quote.image}
       </div>
     </div>
   );
